@@ -1,1 +1,2 @@
-#!/bin/bashS
+#!/bin/bash
+echo "hello world"
