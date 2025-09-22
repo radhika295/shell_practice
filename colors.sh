@@ -27,9 +27,11 @@ if [$? -ne 0]; then
    VALIDATE $? "MYSQL"
 else
     echo "MySql already existed...$G Skipped $N"
+fi
 dnf list installed nginx
 if [$? -ne 0]; then
     dnf install nginx -y
     VALIDATE $? "Nginx"
 else
     echo "Nginx already existed...$G Skipped $N"
+fi
