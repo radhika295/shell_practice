@@ -9,10 +9,11 @@ fi
 
 VALIDATE() {
     if [ $1 -eq 0 ]; then
-         echo "$2 is installed successfully"
-         exit 1
+         echo "$2 is installed successfully: Success"
+         
     else    
-         echo "$2 is not installed it is failed"
+         echo "$2 is not installed it is failed: Failed"
+         exit 1
     fi
 }
 
