@@ -12,9 +12,12 @@ if [ $USERID -ne 0 ]; then
     exit 1
 fi
 LOGS_FOLDER="/var/log/shell-scripting"
-mkdir -p $LOGS_FOLDER
+
 SCRIPT_NAME=$( echo $0 | cut -d "." -f1)
+echo "$SCRIPT_NAME"
 LOG_FILE="$LOGS_FOLDER/$SCRIPT_NAME.log"
+
+mkdir -p $LOGS_FOLDER
 
 VALIDATE() {
     if [ $1 -eq 0 ]; then
