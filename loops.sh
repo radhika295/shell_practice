@@ -35,11 +35,11 @@ VALIDATE() {
 
 for package in $@
 do
-    dnf list installed $package &>>LOG_FILE
+    dnf list installed $package &>>$LOG_FILE
 
     #if exit status is 0, already installed, -ne o neee to intsall it
     if [ $? -ne 0 ]; then
-        dnf install $package -y &>>LOG_FILE
+        dnf install $package -y &>>$LOG_FILE
         VALIDATE $? "$package"
 
     else
